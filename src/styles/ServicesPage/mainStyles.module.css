@@ -1,19 +1,19 @@
 .mainWrapper {
     min-height: 100vh;
-   
+
     margin-bottom: 10vh;
-    background: #fafafa;
     line-height: 1;
    
  }
  .firstSection {
-    margin-top: 12.5vh;
-    margin-bottom: 6vh;
+    padding-top: 10vh;
+    padding-bottom: 2vh;
+    background: #fafafa;
 }
 
  .firstSectionWrapper {
 
-     margin: auto 9vw;
+     margin: auto 0vw auto 9vw;
  }
  .firstSectionGraphic {
     position: relative;
@@ -47,73 +47,62 @@
  
  
  .firstSectionText {
- 
+
   position: relative;
     text-shadow: 1px 1px lightgray;
     font-size: 1.05rem;
     line-height: 3.5vh;
-    max-width: 75vw;
+    min-width: 80vw;
      left: 0;
      margin-top: 7vh;
      color: #1a1a1a;
  }
- .secondSection {
-    min-height: 30vh;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-shadow: 1px 1px lightgray;
+
+ .firstSectionList > li > span:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.1rem; 
+ 
  }
- .secondSection > div > .firstGraphic {
-    position: relative;
-    top: 1vh;
- }
- .secondSection > div > div > img {
-    max-width: 9vw;
-    min-height: 7vh;
-    position: relative;
-    margin: 0 auto;
+ .firstSectionList > li > span:nth-child(even) {
+   margin-left: 1vw;
 
  }
- .serviceWrapper {
+
+ .firstSectionList > li {
      display: flex;
      flex-direction: row;
-     flex-flow: flex-start; 
-}
- .secondSection > div {
-    margin: 2.5vh 7.5vw;
-    min-width: 55vw;
-    margin-bottom: 0;
-    text-align: center;
-    max-width: 50vw;
- }
-
- .FirstTitle, .SecondTitle, .ThirdTitle {
-     font-size: 1rem;
-   margin: 2vh auto;
-  
-  text-align: left;
-    min-width: 45vw;
-    position: relative;
-    color: #1a1a1a;
- }
- .secondSection > div > p {
-     color: #1a1a1a;
-   margin: 5vh 4.5vw 0 4.5vw;
-   min-width: 30vw;
-   position: relative;
-   text-align: left;
-    bottom: 3.5vh;
+     align-items: bottom;
      font-size: .9rem;
-     line-height: 1.15;
+     min-height: 7vh;
  }
+.firstSectionList {
+   
+    text-indent: 1px;
+    margin-left: -1px;
+}
+.secondSection {
+    min-height: 30vh;
+    padding-top: 2vh;
+    align-items: left;
+    text-shadow: 1px 1px lightgray;
+    background: #fafafa;
+  }
  .thirdSection {
-     margin-top: 7.5vh;
+        background: #fafafa;
      min-height: 50vh;
-     
  }
- 
- 
+ .thirdSectionText {
+
+    position: relative;
+      text-shadow: 1px 1px lightgray;
+      font-size: 1.05rem;
+      line-height: 3.5vh;
+      max-width: 75vw;
+       left: 0;
+       margin-top: 7vh;
+       padding-bottom: 7vh;
+       color: #1a1a1a;
+   }
  @media only screen and (min-width: 320px) and (max-width: 450px) {
  
  .firstSectionTitle > h3 {

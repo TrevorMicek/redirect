@@ -1,89 +1,88 @@
 import React from 'react';
 
-import styles from '../../styles/SecondaryPages/mainStyles.module.css';
+import styles from '../../styles/ServicesPage/mainStyles.module.css';
+import Package from '../../components/servicesPricing/package';
+import pricing from '../../components/servicesPricing/PricingInfo';
+import Benefit from '../../components/servicesPricing/TopBenefits';
+import BenefitData from '../../components/servicesPricing/BenefitData'
 
+const Main = () => {
 
-const checkmark = require('../../images/checkmark.jpg')
-
-const Main = () => (
+  return (
     <main>
       <section className={styles.firstSection}>
         <section className={styles.firstSectionWrapper}>
         <div className={styles.firstSectionTitle}>
           <h3>
-           <span>$0</span> Down, <span>$195</span> per month
+          Focused On Quality<br /> &  Ease-of-use
+           
           </h3>
         </div>
         <div>
           <article className={styles.firstSectionText}>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              
-            </p>
+           <ul className={styles.firstSectionList}>
+             <li>
+            
+            <span>Speed: </span> <span> 2x-4x Faster Than WordPress</span>
+            
+      
+             </li>
+             <li>
+               <span>
+              Cost: 
+               </span> <span> No Setup Fee, Affordable Monthly Subscription</span>
+            
+             </li>
+             <li>
+               
+                 <span>Benefit: 
+                 </span>
+                <span> Quality Websites Lead To More Organic Growth</span>
+             </li>
+           </ul>
           </article>
         </div> 
         </section>
       </section>
 
       <section className={styles.secondSection}>
-        <div>
-          <div className={styles.serviceWrapper}>
-          <img src={checkmark} className={styles.firstGraphic} />
-          <h3 className={styles.FirstTitle}>
-            Hosting Free Included
+        <Benefit {...BenefitData.one} />
+        <Benefit {...BenefitData.two} />
+        <Benefit {...BenefitData.three} />
+        <Benefit {...BenefitData.four} />
+        <Benefit {...BenefitData.five} />
+        </section>
+      
+
+      <section className={styles.thirdSection}>
+      <section className={styles.firstSection}>
+        <section className={styles.firstSectionWrapper}>
+        <div className={styles.firstSectionTitle}>
+          <h3>
+           Customized Packages
           </h3>
-          </div>
-          <p className={styles.FirstText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
         </div>
         <div>
-        <div className={styles.serviceWrapper}>
-          <img src={checkmark} className={styles.secondGraphic} />
-          <h3 className={styles.SecondTitle}>
-            Unlimited Edits
-          </h3>
-          </div>
-          <p className={styles.SecondText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          </p>
-        </div>
-        <div>
-        <div className={styles.serviceWrapper}>
-          <img src={checkmark} className={styles.thirdGraphic} />
-          <h3 className={styles.ThirdTitle}>
-            Web Design & Development
-          </h3>
-          </div>
-          <p className={styles.thirdText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          </p>
-        </div>
-        <div>
-        <div className={styles.serviceWrapper}>
-          <img src={checkmark} className={styles.thirdGraphic} />
-          <h3 className={styles.ThirdTitle}>
-            24/7 Customer Service
-          </h3>
-          </div>
-          <p className={styles.thirdText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-          </p>
-        </div>
-        <div>
-        <div className={styles.serviceWrapper}>
-          <img src={checkmark} className={styles.thirdGraphic} />
-          <h3 className={styles.ThirdTitle}>
-            Google Analytics
-          </h3>
-          </div>
-          <p className={styles.thirdText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-          </p>
-        </div>
+          <article className={styles.thirdSectionText}>
+            <p>
+              Alongside these benefits, we offer highly customized packages 
+              that include everything you need. Every small business is different but 
+              we have found that these packages suit most businesses needs. Our main goal is to handle all of your website concerns so we are more than happy to adjust your subscription as needed.
+              
+            </p>
+          </article>
+        </div> 
+        </section>
       </section>
+      
+      <section>
+      <Package {...pricing.tierOne} />
+      <Package {...pricing.tierTwo} />
+      <Package {...pricing.tierThree} />
+      </section>
+      </section>
+      
     </main>
-)
+  )
+}
 export default Main;

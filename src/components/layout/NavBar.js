@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 
 
 import styles from './navBarStyles.module.css';
-const hamburger = require('../images/HamburgerImg.svg')
-const xImg = require('../images/X.svg')
+const hamburger = require('../../images/HamburgerImg.svg')
+const xImg = require('../../images/X.svg')
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,12 +22,12 @@ const Nav = () => {
         }
     })
   }
-  ), [closeMenu])
+  ), [])
   return (
     <nav className={styles.navWrapper}>
       <div className={styles.leftsideNav}>
-        Trevor's <br />
-        Web Design
+        Websites <br />
+        By Trevor
       </div>
       
       
@@ -42,11 +42,12 @@ const Nav = () => {
       </div>
         <div className={styles.mobileListItems}>
           <ul className={styles.mobileNavList}>
-            <li onClick={toggleDropDown}><Link to="/">Home</Link></li>
+            <li onClick={toggleDropDown}>
+              <Link to="/">Home</Link></li>
             <li><Link to="/services">Services</Link></li>
-            <li><Link to="/page-2">About</Link></li>
-            <li><Link to="/index.js">Blog</Link></li>
-            <li><Link to="/index.js">Contact</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/templates">Templates</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
             
      
           </ul>
@@ -64,7 +65,11 @@ const Nav = () => {
      </div>
       <div className={styles.listItems}>
       <ul className={styles.navList}>
-        <li><Link to="index.js">Home</Link></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/page-2">About</Link></li>
+            <li><Link to="/index.js">Blog</Link></li>
+            <li><Link to="/index.js">Contact</Link></li>
    
       </ul>
     </div>
